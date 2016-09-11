@@ -42,5 +42,5 @@ The lines
    
 ###Connect to internet automatically when 3g modem is plugged in
 
-Please follow [this](http://askubuntu.com/questions/284224/autorun-a-script-after-i-plugged-or-unplugged-a-usb-device) guide and run the cutomarized ```NET_CONNECT``` script. 
+Please follow [this](http://askubuntu.com/questions/284224/autorun-a-script-after-i-plugged-or-unplugged-a-usb-device) guide and run the cutomarized ```NET_CONNECT``` script as the script in above guide.  
 
