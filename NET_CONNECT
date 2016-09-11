@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo <password> | sudo -S ./sakis3g silent status
+ret=$?
+if [ "${ret}" -eq "0" ]; then
+	echo <password> | sudo -S ./sakis3g silent disconnect
+fi
+
+mmcli --modem=/org/freedesktop/ModemManager1/Modem/0 -d
+mmcli --modem=/org/freedesktop/ModemManager1/Modem/1 -d
+mmcli --modem=/org/freedesktop/ModemManager1/Modem/2 -d
+mmcli --modem=/org/freedesktop/ModemManager1/Modem/3 -d
+clear
+
+echo "Connecting...."
+echo <password> | sudo -S ./sakis3g silent connect OTHER="USBMODEM" USBMODEM="<vendorID:productID>" APN="<APN>" APN_USER="User" APN_PASS="password"
+
+echo "Connected!"
